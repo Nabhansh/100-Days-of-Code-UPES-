@@ -30,11 +30,16 @@ I build responsive frontends and scalable backends. I love solving real-world pr
 ---
 
 ## 🚀 Featured Projects
-> Add links to your repos here — replace example descriptions with yours.
+> **teddy** — https://github.com/Nabhansh/teddy.git
+> **kiss** — https://github.com/Nabhansh/kiss.git
+> **anniversary** — https://github.com/Nabhansh/anniversary.git
+> **fathers-day** — https://github.com/Nabhansh/fathers-day.git
+> **Lie-wallpaper** — https://github.com/Nabhansh/Live-Wallpaper.git
+> **mothers-day-special** — https://github.com/Nabhansh/mothers-day-special.git
 
 - **Live-Wallpaper** — Interactive live wallpaper web app (JavaScript).  
-- **teddy** — [Add short description]  
-- **kiss** — [Add short description]  
+- **teddy** — A short game for boys to give it to girls.
+- **kiss** — An unshared feeling from boys to girls. 
 - **anniversary / fathers-day / mothers-day-special** — small creative web projects.
 
 ---
