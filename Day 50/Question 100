@@ -1,1 +1,29 @@
+Q100: Print all sub-strings of a string.
 
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    int len, i, j, k;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    len = strlen(str);
+
+    // Generate all substrings
+    for (i = 0; i < len; i++) {
+        for (j = i; j < len; j++) {
+            for (k = i; k <= j; k++) {
+                printf("%c", str[k]);
+            }
+            // Print comma except after last substring
+            if (!(i == len - 1 && j == len - 1))
+                printf(",");
+        }
+    }
+
+    printf("\n");
+    return 0;
+}
