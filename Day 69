@@ -1,0 +1,30 @@
+//Q119: Write a program to take an integer array as input. Only one element will be repeated. Print the repeated element. Try to find the result in one single iteration.
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    int nums[n];
+    printf("Enter array elements: ");
+    for (int i = 0; i < n; i++)
+        scanf("%d", &nums[i]);
+
+    // Using XOR approach
+    // For array of size n, numbers range from 0 to n-2 (since one repeats)
+    int xorAll = 0;
+
+    // XOR all array elements
+    for (int i = 0; i < n; i++)
+        xorAll ^= nums[i];
+
+    // XOR with numbers 0 to n-2
+    for (int i = 0; i < n - 1; i++)
+        xorAll ^= i;
+
+    printf("Repeated element: %d\n", xorAll);
+
+    return 0;
+}
