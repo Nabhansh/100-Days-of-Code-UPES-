@@ -1,0 +1,42 @@
+//Q140: Define a struct with enum Gender and print person's gender.
+
+#include <stdio.h>
+#include <string.h>
+
+enum Gender { MALE, FEMALE };
+
+struct Person {
+    enum Gender gender;
+};
+
+int main() {
+    char input[10];
+    struct Person p;
+
+    scanf("%s", input);   // Example: Gender=MALE → but we only read "Gender=MALE"
+
+    // Extract just the gender part if "Gender=MALE" is given
+    // Find '=' sign
+    char *ptr = strchr(input, '=');
+    if (ptr != NULL) {
+        strcpy(input, ptr + 1);  // Copy the part after '='
+    }
+
+    // Convert string to enum
+    if (strcmp(input, "MALE") == 0)
+        p.gender = MALE;
+    else if (strcmp(input, "FEMALE") == 0)
+        p.gender = FEMALE;
+    else {
+        printf("Invalid gender\n");
+        return 1;
+    }
+
+    // Output based on enum
+    if (p.gender == MALE)
+        printf("Male\n");
+    else
+        printf("Female\n");
+
+    return 0;
+}
